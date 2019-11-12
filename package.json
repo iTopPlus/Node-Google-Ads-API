@@ -1,6 +1,6 @@
 {
-  "name": "node-google-ads-api",
-  "version": "0.0.1",
+  "name": "@itopplus/node-google-ads-api",
+  "version": "1.0.0",
   "description": "Unofficial NodeJs Google Ads API",
   "main": "index.js",
   "scripts": {
