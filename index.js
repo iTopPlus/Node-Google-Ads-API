@@ -1,6 +1,5 @@
-// First Init, Will Publish Soon
-
-
-exports.GoogleAdsAPI = () => {
-    console.log('Will Publish Soon');
-}
+module.exports = {
+    GoogleAdsAPIReport: require('./src/getreport'),
+    GoogleAdsAPIService: require('./src/getservice'),
+    GoogleAdsAuthenication: require('./src/authenication')
+} 

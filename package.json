@@ -1,6 +1,6 @@
 {
   "name": "@itopplus/node-google-ads-api",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Unofficial NodeJs Google Ads API",
   "main": "index.js",
   "scripts": {
@@ -22,5 +22,9 @@
   "bugs": {
     "url": "https://github.com/iTopPlus/Node-Google-Ads-API/issues"
   },
-  "homepage": "https://github.com/iTopPlus/Node-Google-Ads-API#readme"
+  "homepage": "https://github.com/iTopPlus/Node-Google-Ads-API#readme",
+  "dependencies": {
+    "google-auth-library": "^5.5.1",
+    "node-fetch": "^2.6.0"
+  }
 }
