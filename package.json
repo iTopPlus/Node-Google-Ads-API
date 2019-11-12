@@ -1,0 +1,26 @@
+{
+  "name": "node-google-ads-api",
+  "version": "1.0.0",
+  "description": "Unofficial NodeJs Google Ads API",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iTopPlus/Node-Google-Ads-API.git"
+  },
+  "keywords": [
+    "Nodejs",
+    "Google",
+    "Ads",
+    "API",
+    "Unofficial"
+  ],
+  "author": "ITOPPLUS",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/iTopPlus/Node-Google-Ads-API/issues"
+  },
+  "homepage": "https://github.com/iTopPlus/Node-Google-Ads-API#readme"
+}
