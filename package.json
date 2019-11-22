@@ -4,7 +4,8 @@
   "description": "Unofficial NodeJs Google Ads API",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "dev": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,7 @@
   },
   "homepage": "https://github.com/iTopPlus/Node-Google-Ads-API#readme",
   "dependencies": {
+    "@hapi/joi": "^16.1.7",
     "google-auth-library": "^5.5.1",
     "node-fetch": "^2.6.0"
   }

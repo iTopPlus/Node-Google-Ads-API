@@ -39,7 +39,7 @@ class GoogleAdsAPIReport {
         const json = await response.json()
         return json
     }
-
-
 }
+
+
 module.exports = GoogleAdsAPIReport  
