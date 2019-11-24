@@ -6,7 +6,6 @@ const AuthHandler = ({ validator, handler }) => {
             const response = await handler(params, version)
             return validator(response)
         } catch (err) {
-            console.log('err ::>', err.message);
             errorHandler(err)
         }
     }
@@ -18,7 +17,6 @@ const ReportHandler = ({ validator, handler }) => {
             const response = await handler(cid, fields, filters, isLegacy, accessToken)
             return validator(response)
         } catch (err) {
-            console.log('err ::>', err.message);
             errorHandler(err)
         }
     }

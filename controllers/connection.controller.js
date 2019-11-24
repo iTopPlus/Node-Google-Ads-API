@@ -4,7 +4,7 @@ const { AuthHandler } = require('./controllerhandler')
 const { validateInput } = require('../schemas/validate-authen-input')
 const { connectionResponse } = require('../schemas/connection/connection.schema')
 
-const { GoogleAdsConnection } = require('../services/connection/google-ads-connection.service')
+const { createConnection } = require('../services/connection/google-ads-connection.service')
 
 /**
  * @typedef {object} credential
@@ -21,13 +21,12 @@ const { GoogleAdsConnection } = require('../services/connection/google-ads-conne
  */
 const connectionHandler = async (credential, version) => {
     var validRequest = validateInput({ credential, version })
-    var response = await GoogleAdsConnection(validRequest)
-    console.log('response ::>',response);
+    var response = await createConnection(validRequest)
     return response
 }
 
 module.exports = {
-    GoogleAdsConnection: AuthHandler({
+    createConnection: AuthHandler({
         handler: connectionHandler,
         validator: connectionResponse
     }),

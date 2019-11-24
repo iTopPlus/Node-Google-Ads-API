@@ -1,7 +1,3 @@
-const { Campaign } = require('./campaign')
-module.exports = { Campaign: Campaign }
+const { Campaign } = require("./campaign");
 
-
-const conn = GoogleAdsConnection()
-
-conn.Campaign()
+module.exports = { Campaign: Campaign };

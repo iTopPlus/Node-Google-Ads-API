@@ -20,8 +20,6 @@ const { generateAccessToken } = require('../services/authenication')
  * @param {string} version 
  */
 const generateAccessTokenHandler = async (credential, version) => {
-    console.log('credential ::>', credential);
-    console.log('version ::>', version);
     var validRequest = validateInput({ credential, version })
     var response = await generateAccessToken(validRequest)
     return response
