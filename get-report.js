@@ -1,12 +1,12 @@
 "use strict";
 
 const GoogleAdsAuth = require("./get-auth");
-const { FETCH } = require("./data/nodefetch.data");
+const { NodeFetch } = require("./library/node-fetch");
 
 class GoogleAdsReport {
   constructor(configs) {
     this.configs = configs;
-    this.version = "v2";
+    this.version = "v1";
     this.auth = new GoogleAdsAuth(configs);
   }
 
@@ -18,12 +18,11 @@ class GoogleAdsReport {
       Accept: "application/json",
       Authorization: `Bearer  ${accessToken}`,
       "developer-token": this.configs.developerToken,
-      "login-customer-id": ""
+      "login-customer-id": this.configs.loginCustomerId
     };
   }
 
   async getReport(cid, query) {
-    console.log("this.auth ::>", this.auth);
     if (!cid) throw new Error("CID Not Found");
     if (!query) throw new Error("Must Provide Query");
     cid = cid.replace(/-/g, "");
@@ -36,10 +35,9 @@ class GoogleAdsReport {
         body: JSON.stringify({ query: query }),
         headers: header
       };
-      const response = await FETCH(endpoint, option);
+      const response = await NodeFetch(endpoint, option);
       const json = await response.json();
 
-      console.log("json ::>", json);
       return json;
     } catch (err) {
       console.log("err ::>", err);
@@ -56,7 +54,7 @@ class GoogleAdsReport {
         method: "GET",
         headers: header
       };
-      const response = await FETCH(endpoint, option);
+      const response = await NodeFetch(endpoint, option);
       const json = await response.json();
       return json;
     } catch (err) {

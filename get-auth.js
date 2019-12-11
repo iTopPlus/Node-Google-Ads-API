@@ -11,6 +11,7 @@ class GoogleAdsAuth {
       this.configs.clientSecret
     );
     this.setRefreshToken(this.configs.refreshToken);
+    this.accessToken = this.getAccessToken()
   }
 
   getOauth2Client(clientId, clientSecret) {
@@ -38,4 +39,3 @@ class GoogleAdsAuth {
 }
 
 module.exports = GoogleAdsAuth;
-  
