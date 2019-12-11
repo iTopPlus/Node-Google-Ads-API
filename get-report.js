@@ -46,7 +46,6 @@ class GoogleAdsReport {
   }
 
   async getResourceMetadata(type) {
-    type = "campaign";
     try {
       const header = this.setOauthHeader('ACCESS_TOKEN');
       const endpoint = `https://googleads.googleapis.com/${this.version}/googleAdsFields/${type}`;
