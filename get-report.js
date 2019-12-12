@@ -18,7 +18,7 @@ class GoogleAdsReport {
   constructor(configs, accessToken) {
     this.configs = configs;
     this.accessToken = accessToken
-    this.version = "v1";
+    this.version = "v2";
     this.auth = new GoogleAdsAuth(configs);
   }
 
