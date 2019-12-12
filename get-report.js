@@ -4,19 +4,31 @@ const GoogleAdsAuth = require("./get-auth");
 const { NodeFetch } = require("./library/node-fetch");
 
 class GoogleAdsReport {
-  constructor(configs) {
+
+  /**
+   * @param {object} configs 
+   * @property {string} developerToken
+   * @property {string} userAgent
+   * @property {string} clientId
+   * @property {string} clientSecret
+   * @property {string} refreshToken
+   * @property {string} loginCustomerId
+   * @param {string} accessToken 
+   */
+  constructor(configs, accessToken) {
     this.configs = configs;
+    this.accessToken = accessToken
     this.version = "v1";
     this.auth = new GoogleAdsAuth(configs);
   }
 
-  setOauthHeader(accessToken) {
+  setOauthHeader() {
     return {
       "User-Agent": this.configs.userAgent,
       "Content-Type": "application/json",
       charset: "utf-8",
       Accept: "application/json",
-      Authorization: `Bearer  ${accessToken}`,
+      Authorization: `Bearer  ${this.accessToken}`,
       "developer-token": this.configs.developerToken,
       "login-customer-id": this.configs.loginCustomerId
     };
