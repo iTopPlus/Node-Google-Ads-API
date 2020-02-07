@@ -3,15 +3,15 @@
 const { OAuth2Client } = require("google-auth-library");
 
 class GoogleAdsAuth {
-    /**
-   * @param {object} configs 
-   * @property {string} developerToken
-   * @property {string} userAgent
-   * @property {string} clientId
-   * @property {string} clientSecret
-   * @property {string} refreshToken
-   * @property {string} loginCustomerId
-   */
+  /**
+ * @param {object} configs 
+ * @property {string} developerToken
+ * @property {string} userAgent
+ * @property {string} clientId
+ * @property {string} clientSecret
+ * @property {string} refreshToken
+ * @property {string} loginCustomerId
+ */
   constructor(configs) {
     this.configs = configs;
 
